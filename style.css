@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #ffffff; }
+body { min-height: 100vh; }
+.pdf-wrapper { width: 100%; margin: 0 auto; padding: 0; }
+.page { position: relative; width: min(100vw, 595.5px); margin: 0 auto; line-height: 0; background: #fff; }
+.page img { display: block; width: 100%; height: auto; margin: 0; padding: 0; border: 0; }
+.hotspot { position: absolute; display: block; background: transparent; text-decoration: none; cursor: pointer; z-index: 10; }
+.hotspot:focus-visible { outline: 2px solid rgba(160, 120, 90, 0.9); outline-offset: 2px; border-radius: 4px; }
+@media (min-width: 800px) {
+  body { background: #f8f5f0; }
+  .pdf-wrapper { padding: 24px 0; }
+  .page { margin-bottom: 24px; box-shadow: 0 12px 36px rgba(90, 70, 55, .13); }
+}
+@media print {
+  body { background: #fff; }
+  .pdf-wrapper { padding: 0; }
+  .page { width: 100%; margin: 0; box-shadow: none; page-break-after: always; }
+}
